@@ -14,7 +14,7 @@ const purchaseManagerManagerHandler = {
                 console.log("hii")
                 return res.status(400).send({ message: "Incorrect Password" })
             }
-            const token = jwt.sign({ userId: user._id }, process.env.SECRET_KEY, { expiresIn: "5min" })
+            const token = jwt.sign({ userId: user._id }, process.env.SECRET_KEY, { expiresIn: "35min" })
             return res.status(200).json({ token })
         } catch (error) {
             console.error(error)
